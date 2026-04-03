@@ -14,7 +14,2593 @@ int main(){
     cout<<sum()<<endl;
     return 0;
 }
+-----------------------------
 
+I’ll explain your Colab notebook step-by-step in very simple terms so you understand the idea behind each part. Think of this notebook as a beginner lesson covering Python basics: operators, conditions, modules, and loops.
+
+1️⃣ Operators in Python
+
+Operators are symbols that perform operations on values.
+
+Example:
+5 + 6 → + is the operator.
+
+2️⃣ Arithmetic Operators (Math operations)
+
+These work like normal calculator math.
+
+print(5+6)   # addition
+print(5-6)   # subtraction
+print(5*6)   # multiplication
+print(5/2)   # division
+print(5//2)  # floor division
+print(5%2)   # remainder
+print(5**2)  # power
+
+Result explanation:
+
+Code	Meaning	Result
+5+6	Add numbers	11
+5-6	Subtract	-1
+5*6	Multiply	30
+5/2	Normal division	2.5
+5//2	Division without decimal	2
+5%2	Remainder	1
+5**2	Power (5²)	25
+
+💡 Example
+5 % 2 = 1 because 2 goes into 5 two times and 1 remains.
+
+3️⃣ Relational Operators (Comparison)
+
+These compare values and return True or False.
+
+print(4>5)
+print(4<5)
+print(4>=4)
+print(4<=4)
+print(4==4)
+print(4!=4)
+Operator	Meaning
+>	greater than
+<	smaller than
+>=	greater or equal
+<=	smaller or equal
+==	equal
+!=	not equal
+
+Example:
+
+4 < 5 → True
+
+4️⃣ Logical Operators
+
+Used when combining multiple conditions.
+
+print(1 and 0)
+print(1 or 0)
+print(not 1)
+Operator	Meaning
+and	both conditions must be true
+or	one condition must be true
+not	reverses result
+
+Example:
+
+True and False → False
+True or False → True
+5️⃣ Bitwise Operators
+
+These work on binary numbers (0 and 1) inside the computer.
+
+Example:
+
+2 = 10 (binary)
+3 = 11 (binary)
+print(2 & 3)
+
+10 AND 11 = 10
+
+Result → 2
+
+Operators:
+
+Operator	Meaning
+&	AND
+`	`
+^	XOR
+~	NOT
+<<	left shift
+>>	right shift
+
+Example:
+
+5 << 2
+
+Means shift bits left → multiply by 4
+
+Result:
+
+5 × 4 = 20
+6️⃣ Assignment Operators
+
+Used to store values in variables.
+
+Example:
+
+a = 2
+a %= 2
+
+Meaning:
+
+a = a % 2
+
+So
+
+2 % 2 = 0
+
+Now a = 0.
+
+7️⃣ Membership Operators
+
+Check whether something exists inside a list or string.
+
+Example:
+
+print('D' not in 'Delhi')
+
+Explanation:
+
+"Delhi" contains "D"
+
+So result → False
+
+Example:
+
+1 in [2,3,4,5]
+
+Result → False
+
+8️⃣ Program: Sum of digits of a number
+
+Example input:
+
+666
+
+Goal:
+
+6 + 6 + 6 = 18
+
+Concept used:
+
+%10  → last digit
+//10 → remove last digit
+
+Example:
+
+345 % 10 = 5
+345 // 10 = 34
+
+So we keep extracting digits.
+
+9️⃣ If-Else Statements
+
+Used when the program must make decisions.
+
+Example:
+
+if condition:
+    do something
+else:
+    do something else
+🔟 Login Program
+if email == 'nitish.campusx@gmail.com' and password == '1234':
+    print('Welcome')
+
+Logic:
+
+1️⃣ Ask user email
+2️⃣ Ask password
+3️⃣ Check both
+
+Cases:
+
+Situation	Output
+correct email + correct password	Welcome
+correct email + wrong password	ask again
+wrong email	Not correct
+1️⃣1️⃣ Find smallest number
+
+User enters 3 numbers.
+
+Program checks which is smallest.
+
+Example:
+
+a=4
+b=1
+c=10
+
+Result:
+
+smallest is 1
+1️⃣2️⃣ Menu Driven Program
+
+Example menu:
+
+1 → change pin
+2 → check balance
+3 → withdraw
+4 → exit
+
+Program reads the user's choice.
+
+if menu == '1':
+    print('pin change')
+elif menu == '2':
+    print('balance')
+else:
+    print('exit')
+1️⃣3️⃣ Modules in Python
+
+Modules are prewritten code libraries.
+
+They save time so we don't have to write everything ourselves.
+
+Example modules used:
+
+math
+import math
+math.sqrt(196)
+
+Result:
+
+14
+keyword
+
+Shows Python reserved words
+
+import keyword
+print(keyword.kwlist)
+
+Example keywords:
+
+if
+else
+while
+for
+return
+class
+
+You cannot use them as variable names.
+
+random
+
+Used to generate random numbers
+
+random.randint(1,100)
+
+Example result:
+
+88
+datetime
+
+Used to get current time and date
+
+datetime.datetime.now()
+
+Example:
+
+2022-11-08 15:50:21
+1️⃣4️⃣ Loops
+
+Loops repeat code multiple times.
+
+Example:
+
+repeat something again and again
+
+Two main loops:
+
+while loop
+for loop
+1️⃣5️⃣ While Loop
+
+Example: multiplication table
+
+i = 1
+while i < 11:
+    print(number*i)
+    i += 1
+
+Example output:
+
+12 × 1
+12 × 2
+...
+12 × 10
+1️⃣6️⃣ While Loop with Else
+while x < 3:
+    print(x)
+else:
+    print("limit crossed")
+
+Output:
+
+1
+2
+limit crossed
+
+The else runs when loop finishes normally.
+
+1️⃣7️⃣ Guessing Game
+
+Computer chooses random number.
+
+jackpot = random.randint(1,100)
+
+User keeps guessing.
+
+Program tells:
+
+guess higher
+guess lower
+
+When correct:
+
+correct guess
+attempts 7
+
+This uses:
+
+loops
+
+conditions
+
+random numbers
+
+1️⃣8️⃣ For Loop
+
+Used when you know how many times to repeat.
+
+Example:
+
+for i in {1,2,3,4,5}:
+    print(i)
+
+Output:
+
+1
+2
+3
+4
+5
+1️⃣9️⃣ Population Example
+
+Population = 10000
+Growth = 10%
+
+Each year:
+
+new_population = old_population - 10%
+
+Program prints population for last 10 years.
+
+2️⃣0️⃣ Patterns
+
+Examples like:
+
+***
+****
+***
+
+or
+
+1
+121
+12321
+
+These use nested loops (loop inside loop).
+
+2️⃣1️⃣ Loop Control Statements
+Break
+
+Stops loop immediately.
+
+Example:
+
+for i in range(10):
+    if i == 5:
+        break
+
+Loop stops at 5.
+
+Continue
+
+Skips current step.
+
+Example:
+
+if i == 5:
+    continue
+
+5 will not print.
+
+Pass
+
+Does nothing.
+
+Used as placeholder.
+
+Example:
+
+if x > 10:
+    pass
+🧠 Big Picture of This Notebook
+
+This session teaches Python fundamentals:
+
+1️⃣ Operators
+2️⃣ Conditions (if-else)
+3️⃣ Modules
+4️⃣ Loops
+5️⃣ Basic programs
+
+These are the core building blocks of programming.
+
+✅ If you want, I can also explain:
+
+How % and // work visually (super easy trick)
+
+Difference between for and while (very important for exams)
+
+How to solve pattern problems easily
+
+How the guessing game works step-by-step
+
+Just tell me 👍
+
+
+session-4-python-lists.ipynb
+session-4-python-lists.ipynb_
+1. Lists
+What are Lists?
+Lists Vs Arrays
+Characterstics of a List
+How to create a list
+Access items from a List
+Editing items in a List
+Deleting items from a List
+Operations on Lists
+Functions on Lists
+What are Lists
+List is a data type where you can store multiple items under 1 name. More technically, lists act like dynamic arrays which means you can add more items on the fly.
+
+image.png
+
+Why Lists are required in programming?
+Array Vs Lists
+Fixed Vs Dynamic Size
+Convenience -> Hetrogeneous
+Speed of Execution
+Memory
+
+[ ]
+L = [1,2,3]
+
+print(id(L))
+print(id(L[0]))
+print(id(L[1]))
+print(id(L[2]))
+print(id(1))
+print(id(2))
+print(id(3))
+140163201133376
+11126688
+11126720
+11126752
+11126688
+11126720
+11126752
+How lists are stored in memory
+Characterstics of a List
+Ordered
+Changeble/Mutable
+Hetrogeneous
+Can have duplicates
+are dynamic
+can be nested
+items can be accessed
+can contain any kind of objects in python
+
+[ ]
+L = [1,2,3,1]
+L1 = [3,2,1]
+
+L == L1
+False
+Creating a List
+
+[ ]
+# Empty
+print([])
+# 1D -> Homo
+print([1,2,3,4,5])
+# 2D
+print([1,2,3,[4,5]])
+# 3D
+print([[[1,2],[3,4]],[[5,6],[7,8]]])
+# Hetrogenous
+print([1,True,5.6,5+6j,'Hello'])
+# Using Type conversion
+print(list('hello'))
+[]
+[1, 2, 3, 4, 5]
+[1, 2, 3, [4, 5]]
+[[[1, 2], [3, 4]], [[5, 6], [7, 8]]]
+[1, True, 5.6, (5+6j), 'Hello']
+['h', 'e', 'l', 'l', 'o']
+Accessing Items from a List
+
+[ ]
+# Indexing
+L = [[[1,2],[3,4]],[[5,6],[7,8]]]
+#positive
+#print(L[0][0][1])
+
+# Slicing
+L = [1,2,3,4,5,6]
+
+print(L[::-1])
+[6, 5, 4, 3, 2, 1]
+Adding Items to a List
+
+[ ]
+# append
+L = [1,2,3,4,5]
+L.append(True)
+print(L)
+[1, 2, 3, 4, 5, True]
+
+[ ]
+# extend
+L = [1,2,3,4,5]
+L.extend([6,7,8])
+print(L)
+[1, 2, 3, 4, 5, 6, 7, 8]
+
+[ ]
+L = [1,2,3,4,5]
+L.append([6,7,8])
+print(L)
+[1, 2, 3, 4, 5, [6, 7, 8]]
+
+[ ]
+L = [1,2,3,4,5]
+L.extend('delhi')
+print(L)
+[1, 2, 3, 4, 5, 'd', 'e', 'l', 'h', 'i']
+
+[ ]
+# insert
+L = [1,2,3,4,5]
+
+L.insert(1,100)
+print(L)
+[1, 100, 2, 3, 4, 5]
+Editing items in a List
+
+[ ]
+L = [1,2,3,4,5]
+
+# editing with indexing
+L[-1] = 500
+
+# editing with slicing
+L[1:4] = [200,300,400]
+
+print(L)
+[1, 200, 300, 400, 500]
+Deleting items from a List
+
+[ ]
+# del
+L = [1,2,3,4,5]
+
+# indexing
+del L[-1]
+
+# slicing
+del L[1:3]
+print(L)
+[1, 4]
+
+[ ]
+# remove
+
+L = [1,2,3,4,5]
+
+L.remove(5)
+
+print(L)
+
+[1, 2, 3, 4]
+
+[ ]
+# pop
+L = [1,2,3,4,5]
+
+L.pop()
+
+print(L)
+[1, 2, 3, 4]
+
+[ ]
+# clear
+L = [1,2,3,4,5]
+
+L.clear()
+
+print(L)
+[]
+Operations on Lists
+Arithmetic
+Membership
+Loop
+
+[ ]
+# Arithmetic (+ ,*)
+
+L1 = [1,2,3,4]
+L2 = [5,6,7,8]
+
+# Concatenation/Merge
+print(L1 + L2)
+[1, 2, 3, 4, 5, 6, 7, 8]
+
+[ ]
+print(L1*3)
+[1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4]
+
+[ ]
+L1 = [1,2,3,4,5]
+L2 = [1,2,3,4,[5,6]]
+
+print(5 not in L1)
+print([5,6] in L2)
+False
+True
+
+[ ]
+# Loops
+L1 = [1,2,3,4,5]
+L2 = [1,2,3,4,[5,6]]
+L3 = [[[1,2],[3,4]],[[5,6],[7,8]]]
+
+for i in L3:
+  print(i)
+[[1, 2], [3, 4]]
+[[5, 6], [7, 8]]
+List Functions
+
+[ ]
+# len/min/max/sorted
+L = [2,1,5,7,0]
+
+print(len(L))
+print(min(L))
+print(max(L))
+print(sorted(L,reverse=True))
+5
+0
+7
+[7, 5, 2, 1, 0]
+
+[ ]
+# count 
+L = [1,2,1,3,4,1,5]
+L.count(5)
+1
+
+[ ]
+# index
+L = [1,2,1,3,4,1,5]
+L.index(1)
+0
+
+[ ]
+# reverse
+L = [2,1,5,7,0]
+# permanently reverses the list
+L.reverse()
+print(L)
+[0, 7, 5, 1, 2]
+
+[ ]
+# sort (vs sorted)
+L = [2,1,5,7,0]
+print(L)
+print(sorted(L))
+print(L)
+L.sort()
+print(L)
+[2, 1, 5, 7, 0]
+[0, 1, 2, 5, 7]
+[2, 1, 5, 7, 0]
+[0, 1, 2, 5, 7]
+
+[ ]
+# copy -> shallow
+L = [2,1,5,7,0]
+print(L)
+print(id(L))
+L1 = L.copy()
+print(L1)
+print(id(L1))
+[2, 1, 5, 7, 0]
+140163201056112
+[2, 1, 5, 7, 0]
+140163201128800
+List Comprehension
+List Comprehension provides a concise way of creating lists.
+
+newlist = [expression for item in iterable if condition == True]image.png
+
+Advantages of List Comprehension
+
+More time-efficient and space-efficient than loops.
+Require fewer lines of code.
+Transforms iterative statement into a formula.
+
+[ ]
+# Add 1 to 10 numbers to a list
+L = []
+
+for i in range(1,11):
+  L.append(i)
+
+print(L)
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+[ ]
+L = [i for i in range(1,11)]
+print(L)
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+[ ]
+# scalar multiplication on a vector
+v = [2,3,4]
+s = -3
+# [-6,-9,-12]
+
+[s*i for i in v]
+[-6, -9, -12]
+
+[ ]
+# Add squares
+L = [1,2,3,4,5]
+
+[i**2 for i in L]
+
+[1, 4, 9, 16, 25]
+
+[ ]
+# Print all numbers divisible by 5 in the range of 1 to 50
+
+[i for i in range(1,51) if i%5 == 0]
+[5, 10, 15, 20, 25, 30, 35, 40, 45, 50]
+
+[ ]
+# find languages which start with letter p
+languages = ['java','python','php','c','javascript']
+
+[language for language in languages if language.startswith('p')]
+['python', 'php']
+
+[ ]
+# Nested if with List Comprehension
+basket = ['apple','guava','cherry','banana']
+my_fruits = ['apple','kiwi','grapes','banana']
+
+# add new list from my_fruits and items if the fruit exists in basket and also starts with 'a'
+
+[fruit for fruit in my_fruits if fruit in basket if fruit.startswith('a')]
+['apple']
+
+[ ]
+# Print a (3,3) matrix using list comprehension -> Nested List comprehension
+[[i*j for i in range(1,4)] for j in range(1,4)]
+[[1, 2, 3], [2, 4, 6], [3, 6, 9]]
+
+[ ]
+# cartesian products -> List comprehension on 2 lists together
+L1 = [1,2,3,4]
+L2 = [5,6,7,8]
+
+[i*j for i in L1 for j in L2]
+[5, 6, 7, 8, 10, 12, 14, 16, 15, 18, 21, 24, 20, 24, 28, 32]
+2 ways to traverse a list
+itemwise
+indexwise
+
+[ ]
+# itemwise
+L = [1,2,3,4]
+
+for i in L:
+  print(i)
+1
+2
+3
+4
+
+[ ]
+# indexwise
+L = [1,2,3,4]
+
+for i in range(0,len(L)):
+  print(L[i])
+
+1
+2
+3
+4
+Zip
+The zip() function returns a zip object, which is an iterator of tuples where the first item in each passed iterator is paired together, and then the second item in each passed iterator are paired together.
+
+If the passed iterators have different lengths, the iterator with the least items decides the length of the new iterator.
+
+
+[ ]
+# Write a program to add items of 2 lists indexwise
+
+L1 = [1,2,3,4]
+L2 = [-1,-2,-3,-4]
+
+list(zip(L1,L2)) 
+
+[i+j for i,j in zip(L1,L2)]
+[0, 0, 0, 0]
+
+[ ]
+L = [1,2,print,type,input]
+
+print(L)
+[1, 2, <built-in function print>, <class 'type'>, <bound method Kernel.raw_input of <google.colab._kernel.Kernel object at 0x7f7a67452a90>>]
+Disadvantages of Python Lists
+Slow
+Risky usage
+eats up more memory
+
+[ ]
+a = [1,2,3]
+b = a.copy()
+
+print(a)
+print(b)
+
+a.append(4)
+print(a)
+print(b)
+
+# lists are mutable
+[1, 2, 3]
+[1, 2, 3]
+[1, 2, 3, 4]
+[1, 2, 3]
+List Programs
+
+[ ]
+# Create 2 lists from a given list where 
+# 1st list will contain all the odd numbers from the original list and
+# the 2nd one will contain all the even numbers 
+
+L = [1,2,3,4,5,6]
+
+[ ]
+# How to take list as input from user
+
+[ ]
+# Write a program to merge 2 list without using the + operator
+L1 = [1,2,3,4]
+L2 = [5,6,7,8]
+
+
+[ ]
+# Write a program to replace an item with a different item if found in the list 
+L = [1,2,3,4,5,3]
+# replace 3 with 300
+
+[ ]
+# Write a program that can convert a 2D list to 1D list
+
+[ ]
+# Write a program to remove duplicate items from a list
+
+L = [1,2,1,2,3,4,5,3,4]
+
+[ ]
+# Write a program to check if a list is in ascending order or not
+Colab paid products - Cancel contracts here
+
+I’ll explain the two notebooks you sent in very simple terms (beginner / baby steps). Think of this like a Python class summary so you understand why each thing exists. 🧠🐍
+
+1️⃣ Operators in Python
+
+Operators are symbols that perform operations on values.
+
+Example:
+5 + 6
+
+5 and 6 → numbers
+
++ → operator
+
+Result → 11
+
+Arithmetic Operators (Math)
+
+These are normal math operations.
+
+Operator	Meaning	Example	Result
++	Add	5+6	11
+-	Subtract	5-6	-1
+*	Multiply	5*6	30
+/	Division	5/2	2.5
+//	Floor division (no decimal)	5//2	2
+%	Remainder	5%2	1
+**	Power	5**2	25
+
+Example:
+
+5 % 2
+
+Meaning:
+
+Divide 5 by 2
+
+Remainder = 1
+
+2️⃣ Relational Operators (Comparison)
+
+These compare two values and return True or False.
+
+Operator	Meaning
+>	greater than
+<	less than
+>=	greater or equal
+<=	less or equal
+==	equal
+!=	not equal
+
+Example:
+
+4 > 5
+
+Result → False
+
+3️⃣ Logical Operators
+
+Used when combining conditions.
+
+Operator	Meaning
+and	both must be true
+or	at least one true
+not	reverse result
+
+Example:
+
+1 and 0
+
+Meaning:
+
+True AND False → False (0)
+
+4️⃣ Bitwise Operators (Advanced)
+
+These work on binary numbers (0 and 1).
+
+Example:
+
+2 & 3
+
+Binary form:
+
+2 = 10
+3 = 11
+---------
+& = 10
+
+Result = 2
+
+Other bitwise operators:
+
+Operator	Meaning
+&	AND
+`	`
+^	XOR
+~	NOT
+<<	left shift
+>>	right shift
+
+These are mostly used in low-level programming.
+
+5️⃣ Assignment Operators
+
+Used to store values in variables.
+
+Example:
+
+a = 2
+
+Meaning → store 2 inside a
+
+Another example:
+
+a %= 2
+
+Means:
+
+a = a % 2
+6️⃣ Membership Operators
+
+Used to check if something exists inside something.
+
+Operator	Meaning
+in	exists
+not in	does not exist
+
+Example:
+
+'D' in 'Delhi'
+
+Result → True
+
+Because D exists in Delhi
+
+7️⃣ Example Program: Sum of digits
+
+If user enters:
+
+345
+
+Python breaks it like this:
+
+345 % 10 = 5
+
+Now remove last digit:
+
+345 // 10 = 34
+
+Again:
+
+34 % 10 = 4
+
+Again:
+
+3 % 10 = 3
+
+Now sum:
+
+3 + 4 + 5 = 12
+8️⃣ If-Else (Decision Making)
+
+Used when a program needs to choose between options.
+
+Example:
+
+if condition:
+   do something
+else:
+   do something else
+Example Login Program
+if email correct AND password correct
+    Welcome
+elif email correct but password wrong
+    ask password again
+else
+    Not correct
+
+This is how login systems work.
+
+9️⃣ Menu Driven Program
+
+Example ATM menu:
+
+1. pin change
+2. balance
+3. withdraw
+4. exit
+
+Program checks what number user entered.
+
+🔟 Python Modules
+
+Modules are ready-made libraries.
+
+They save time.
+
+Example:
+
+import math
+
+Now you can use math tools.
+
+Example:
+
+math.sqrt(196)
+
+Result:
+
+14
+Common Modules
+Module	Use
+math	math functions
+random	random numbers
+datetime	date & time
+keyword	Python keywords
+
+Example:
+
+random.randint(1,100)
+
+Gives random number between 1 and 100
+
+1️⃣1️⃣ Loops
+
+Loops repeat tasks.
+
+Example:
+
+Instead of writing
+
+print(1)
+print(2)
+print(3)
+
+We use loop.
+
+While Loop
+
+Runs until condition becomes false.
+
+Example:
+
+i = 1
+while i < 11:
+   print(i)
+   i += 1
+
+Output:
+
+1 2 3 4 5 6 7 8 9 10
+Example: Multiplication Table
+
+Input:
+
+12
+
+Loop prints:
+
+12 × 1
+12 × 2
+12 × 3
+...
+12 × 10
+Guessing Game 🎮
+
+Computer generates random number:
+
+random.randint(1,100)
+
+User keeps guessing until correct.
+
+Program helps:
+
+guess higher
+guess lower
+For Loop
+
+Used when we know how many times to repeat.
+
+Example:
+
+for i in range(1,6):
+    print(i)
+
+Output:
+
+1 2 3 4 5
+Loop Control
+Keyword	Use
+break	stop loop
+continue	skip current step
+pass	do nothing
+
+Example:
+
+for i in range(5):
+   if i == 3:
+      break
+
+Stops at 3
+
+2️⃣ Lists in Python
+
+A list stores multiple values in one variable.
+
+Example:
+
+L = [1,2,3,4]
+Why Lists?
+
+Without lists:
+
+a=1
+b=2
+c=3
+d=4
+
+With list:
+
+L = [1,2,3,4]
+
+Much easier.
+
+Characteristics of Lists
+
+Lists are:
+
+Ordered
+
+Changeable
+
+Can store different data types
+
+Allow duplicates
+
+Example:
+
+[1, True, 5.6, "Hello"]
+Creating Lists
+[]
+
+Empty list
+
+[1,2,3]
+
+Simple list
+
+[1,2,[3,4]]
+
+Nested list
+
+Accessing List Items
+
+Using index.
+
+L = [10,20,30]
+
+Indexes:
+
+0 → 10
+1 → 20
+2 → 30
+
+Example:
+
+L[1]
+
+Output:
+
+20
+Slicing Lists
+
+Example:
+
+L = [1,2,3,4,5]
+
+Reverse list:
+
+L[::-1]
+
+Result:
+
+[5,4,3,2,1]
+Adding Items
+append()
+
+Adds item to end.
+
+L.append(6)
+extend()
+
+Adds multiple items.
+
+L.extend([6,7,8])
+insert()
+
+Insert at specific position.
+
+L.insert(1,100)
+Editing List
+
+Example:
+
+L[0] = 500
+
+Changes first value.
+
+Deleting Items
+del
+del L[0]
+remove
+L.remove(5)
+
+Deletes value 5
+
+pop
+L.pop()
+
+Removes last element
+
+List Operations
+Merge Lists
+L1 + L2
+Repeat
+L1 * 3
+List Functions
+Function	Use
+len()	count elements
+min()	smallest
+max()	largest
+sorted()	sort list
+
+Example:
+
+sorted([5,2,1])
+
+Result:
+
+[1,2,5]
+List Comprehension (Very Important)
+
+A short way to create lists.
+
+Normal method:
+
+L = []
+for i in range(1,11):
+    L.append(i)
+
+Short method:
+
+L = [i for i in range(1,11)]
+
+Same result.
+
+Example: Squares
+[i**2 for i in range(1,6)]
+
+Result:
+
+[1,4,9,16,25]
+Zip Function
+
+Combines two lists.
+
+Example:
+
+L1 = [1,2,3]
+L2 = [4,5,6]
+
+zip(L1,L2)
+
+Result:
+
+(1,4)
+(2,5)
+(3,6)
+Example Program
+
+Add two lists:
+
+[i+j for i,j in zip(L1,L2)]
+Important Concept
+
+Lists are mutable.
+
+Meaning:
+
+They can change.
+
+Example:
+
+L = [1,2,3]
+L.append(4)
+
+Now:
+
+[1,2,3,4]
+Summary (Very Important)
+
+You learned:
+
+✅ Operators
+✅ If-Else
+✅ Loops
+✅ Modules
+✅ Lists
+✅ List Functions
+✅ List Comprehension
+✅ Zip function
+
+These are core Python basics.
+
+✅ If you want, I can also explain:
+
+Python Lists in 10 minutes with diagrams
+
+While vs For loop (very clearly)
+
+10 common Python exam questions from these topics (very likely in your test).
+
+
+python-tuple-sets-dictionary.ipynb
+python-tuple-sets-dictionary.ipynb_
+Tuples
+A tuple in Python is similar to a list. The difference between the two is that we cannot change the elements of a tuple once it is assigned whereas we can change the elements of a list.
+
+In short, a tuple is an immutable list. A tuple can not be changed in any way once it is created.
+
+Characterstics
+
+Ordered
+Unchangeble
+Allows duplicate
+Plan of attack
+Creating a Tuple
+Accessing items
+Editing items
+Adding items
+Deleting items
+Operations on Tuples
+Tuple Functions
+Creating Tuples
+
+[ ]
+# empty
+t1 = ()
+print(t1)
+# create a tuple with a single item
+t2 = ('hello',)
+print(t2)
+print(type(t2))
+# homo
+t3 = (1,2,3,4)
+print(t3)
+# hetro
+t4 = (1,2.5,True,[1,2,3])
+print(t4)
+# tuple
+t5 = (1,2,3,(4,5))
+print(t5)
+# using type conversion
+t6 = tuple('hello')
+print(t6)
+()
+('hello',)
+<class 'tuple'>
+(1, 2, 3, 4)
+(1, 2.5, True, [1, 2, 3])
+(1, 2, 3, (4, 5))
+('h', 'e', 'l', 'l', 'o')
+Accessing Items
+Indexing
+Slicing
+
+[ ]
+print(t3)
+print(t3[0])
+print(t3[-1])
+(1, 2, 3, 4)
+1
+4
+
+[ ]
+t5[-1][0]
+4
+Editing items
+
+[ ]
+print(t3)
+t3[0] = 100
+# immutable just like strings
+
+Adding items
+
+[ ]
+print(t3)
+# not possible
+(1, 2, 3, 4)
+Deleting items
+
+[ ]
+print(t3)
+del t3
+print(t3)
+
+
+[ ]
+t = (1,2,3,4,5)
+
+t[-1:-4:-1]
+(5, 4, 3)
+
+[ ]
+print(t5)
+del t5[-1]
+
+Operations on Tuples
+
+[ ]
+# + and *
+t1 = (1,2,3,4)
+t2 = (5,6,7,8)
+
+print(t1 + t2)
+
+print(t1*3)
+# membership
+1 in t1
+# iteration
+for i in t1:
+  print(i)
+(1, 2, 3, 4, 5, 6, 7, 8)
+(1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4)
+1
+2
+3
+4
+Tuple Functions
+
+[ ]
+# len/sum/min/max/sorted
+t = (1,2,3,4)
+len(t)
+
+sum(t)
+
+min(t)
+
+max(t)
+
+sorted(t,reverse=True)
+[4, 3, 2, 1]
+
+[ ]
+# count
+
+t = (1,2,3,4,5)
+
+t.count(50)
+0
+
+[ ]
+# index
+t.index(50)
+
+Difference between Lists and Tuples
+Syntax
+Mutability
+Speed
+Memory
+Built in functionality
+Error prone
+Usability
+
+[ ]
+import time 
+
+L = list(range(100000000))
+T = tuple(range(100000000))
+
+start = time.time()
+for i in L:
+  i*5
+print('List time',time.time()-start)
+
+start = time.time()
+for i in T:
+  i*5
+print('Tuple time',time.time()-start)
+List time 9.853569507598877
+Tuple time 8.347511053085327
+
+[ ]
+import sys
+
+L = list(range(1000))
+T = tuple(range(1000))
+
+print('List size',sys.getsizeof(L))
+print('Tuple size',sys.getsizeof(T))
+
+List size 9120
+Tuple size 8056
+
+[ ]
+a = [1,2,3]
+b = a
+
+a.append(4)
+print(a)
+print(b)
+[1, 2, 3, 4]
+[1, 2, 3, 4]
+
+[ ]
+a = (1,2,3)
+b = a
+
+a = a + (4,)
+print(a)
+print(b)
+(1, 2, 3, 4)
+(1, 2, 3)
+Why use tuple?
+Special Syntax
+
+[ ]
+# tuple unpacking
+a,b,c = (1,2,3)
+print(a,b,c)
+1 2 3
+
+[ ]
+a,b = (1,2,3)
+print(a,b)
+
+
+[ ]
+a = 1
+b = 2
+a,b = b,a
+
+print(a,b)
+2 1
+
+[ ]
+a,b,*others = (1,2,3,4)
+print(a,b)
+print(others)
+1 2
+[3, 4]
+
+[ ]
+# zipping tuples
+a = (1,2,3,4)
+b = (5,6,7,8)
+
+tuple(zip(a,b))
+((1, 5), (2, 6), (3, 7), (4, 8))
+Sets
+A set is an unordered collection of items. Every set element is unique (no duplicates) and must be immutable (cannot be changed).
+
+However, a set itself is mutable. We can add or remove items from it.
+
+Sets can also be used to perform mathematical set operations like union, intersection, symmetric difference, etc.
+
+Characterstics:
+
+Unordered
+Mutable
+No Duplicates
+Can't contain mutable data types
+Creating Sets
+
+[ ]
+# empty
+s = set()
+print(s)
+print(type(s))
+# 1D and 2D
+s1 = {1,2,3}
+print(s1)
+#s2 = {1,2,3,{4,5}}
+#print(s2)
+# homo and hetro
+s3 = {1,'hello',4.5,(1,2,3)}
+print(s3)
+# using type conversion
+
+s4 = set([1,2,3])
+print(s4)
+# duplicates not allowed
+s5 = {1,1,2,2,3,3}
+print(s5)
+# set can't have mutable items
+s6 = {1,2,[3,4]}
+print(s6)
+
+
+[ ]
+s1 = {1,2,3}
+s2 = {3,2,1}
+
+print(s1 == s2)
+True
+
+[ ]
+
+Start coding or generate with AI.
+Accessing Items
+
+[ ]
+s1 = {1,2,3,4}
+s1[0:3]
+
+Editing Items
+
+[ ]
+s1 = {1,2,3,4}
+s1[0] = 100
+
+Adding Items
+
+[ ]
+S = {1,2,3,4}
+# add
+# S.add(5)
+# print(S)
+# update
+S.update([5,6,7])
+print(S)
+{1, 2, 3, 4, 5, 6, 7}
+Deleting Items
+
+[ ]
+# del
+s = {1,2,3,4,5}
+# print(s)
+# del s[0]
+# print(s)
+# discard
+# s.discard(50)
+# print(s)
+# remove
+# s.remove(50)
+# print(s)
+# pop
+# s.pop()
+# clear
+s.clear()
+print(s)
+set()
+Set Operation
+
+[ ]
+s1 = {1,2,3,4,5}
+s2 = {4,5,6,7,8}
+s1 | s2
+# Union(|)
+# Intersection(&)
+s1 & s2
+# Difference(-)
+s1 - s2
+s2 - s1
+# Symmetric Difference(^)
+s1 ^ s2
+# Membership Test
+1 not in s1
+# Iteration
+for i in s1:
+  print(i)
+1
+2
+3
+4
+5
+Set Functions
+
+[ ]
+# len/sum/min/max/sorted
+s = {3,1,4,5,2,7}
+len(s)
+sum(s)
+min(s)
+max(s)
+sorted(s,reverse=True)
+[7, 5, 4, 3, 2, 1]
+
+[ ]
+# union/update
+s1 = {1,2,3,4,5}
+s2 = {4,5,6,7,8}
+
+# s1 | s2
+s1.union(s1)
+
+s1.update(s2)
+print(s1)
+print(s2)
+{1, 2, 3, 4, 5, 6, 7, 8}
+{4, 5, 6, 7, 8}
+
+[ ]
+# intersection/intersection_update
+s1 = {1,2,3,4,5}
+s2 = {4,5,6,7,8}
+
+s1.intersection(s2)
+
+s1.intersection_update(s2)
+print(s1)
+print(s2)
+{4, 5}
+{4, 5, 6, 7, 8}
+
+[ ]
+# difference/difference_update
+s1 = {1,2,3,4,5}
+s2 = {4,5,6,7,8}
+
+s1.difference(s2)
+
+s1.difference_update(s2)
+print(s1)
+print(s2)
+{1, 2, 3}
+{4, 5, 6, 7, 8}
+
+[ ]
+# symmetric_difference/symmetric_difference_update
+s1 = {1,2,3,4,5}
+s2 = {4,5,6,7,8}
+
+s1.symmetric_difference(s2)
+
+s1.symmetric_difference_update(s2)
+print(s1)
+print(s2)
+{1, 2, 3, 6, 7, 8}
+{4, 5, 6, 7, 8}
+
+[ ]
+# isdisjoint/issubset/issuperset
+s1 = {1,2,3,4}
+s2 = {7,8,5,6}
+
+s1.isdisjoint(s2)
+True
+
+[ ]
+s1 = {1,2,3,4,5}
+s2 = {3,4,5}
+
+s1.issuperset(s2)
+True
+
+[ ]
+# copy
+s1 = {1,2,3}
+s2 = s1.copy()
+
+print(s1)
+print(s2)
+{1, 2, 3}
+{1, 2, 3}
+Frozenset
+Frozen set is just an immutable version of a Python set object
+
+
+[ ]
+# create frozenset
+fs1 = frozenset([1,2,3])
+fs2 = frozenset([3,4,5])
+
+fs1 | fs2
+frozenset({1, 2, 3, 4, 5})
+
+[ ]
+# what works and what does not
+# works -> all read functions
+# does't work -> write operations
+
+[ ]
+# When to use
+# 2D sets
+fs = frozenset([1,2,frozenset([3,4])])
+fs
+frozenset({1, 2, frozenset({3, 4})})
+Set Comprehension
+
+[ ]
+# examples
+
+{i**2 for i in range(1,11) if i>5}
+{36, 49, 64, 81, 100}
+
+[ ]
+
+Start coding or generate with AI.
+Dictionary
+Dictionary in Python is a collection of keys values, used to store data values like a map, which, unlike other data types which hold only a single value as an element.
+
+In some languages it is known as map or assosiative arrays.
+
+dict = { 'name' : 'nitish' , 'age' : 33 , 'gender' : 'male' }
+
+Characterstics:
+
+Mutable
+Indexing has no meaning
+keys can't be duplicated
+keys can't be mutable items
+Create Dictionary
+
+[ ]
+# empty dictionary
+d = {}
+d
+# 1D dictionary
+d1 = { 'name' : 'nitish' ,'gender' : 'male' }
+d1
+# with mixed keys
+d2 = {(1,2,3):1,'hello':'world'}
+d2
+# 2D dictionary -> JSON
+s = {
+    'name':'nitish',
+     'college':'bit',
+     'sem':4,
+     'subjects':{
+         'dsa':50,
+         'maths':67,
+         'english':34
+     }
+}
+s
+# using sequence and dict function
+d4 = dict([('name','nitish'),('age',32),(3,3)])
+d4
+# duplicate keys
+d5 = {'name':'nitish','name':'rahul'}
+d5
+# mutable items as keys
+d6 = {'name':'nitish',(1,2,3):2}
+print(d6)
+{'name': 'nitish', (1, 2, 3): 2}
+Accessing items
+
+[ ]
+my_dict = {'name': 'Jack', 'age': 26}
+# []
+my_dict['age']
+# get
+my_dict.get('age')
+
+s['subjects']['maths']
+67
+Adding key-value pair
+
+[ ]
+d4['gender'] = 'male'
+d4
+d4['weight'] = 72
+d4
+
+s['subjects']['ds'] = 75
+s
+{'name': 'nitish',
+ 'college': 'bit',
+ 'sem': 4,
+ 'subjects': {'dsa': 50, 'maths': 67, 'english': 34, 'ds': 75}}
+Remove key-value pair
+
+[ ]
+d = {'name': 'nitish', 'age': 32, 3: 3, 'gender': 'male', 'weight': 72}
+# pop
+#d.pop(3)
+#print(d)
+# popitem
+#d.popitem()
+# d.popitem()
+# print(d)
+# del
+#del d['name']
+#print(d)
+# clear
+d.clear()
+print(d)
+
+del s['subjects']['maths']
+s
+{}
+{'name': 'nitish',
+ 'college': 'bit',
+ 'sem': 4,
+ 'subjects': {'dsa': 50, 'english': 34, 'ds': 75}}
+Editing key-value pair
+
+[ ]
+s['subjects']['dsa'] = 80
+s
+{'name': 'nitish',
+ 'college': 'bit',
+ 'sem': 5,
+ 'subjects': {'dsa': 80, 'english': 34, 'ds': 75}}
+Dictionary Operations
+Membership
+Iteration
+
+[ ]
+print(s)
+
+'name' in s
+{'name': 'nitish', 'college': 'bit', 'sem': 5, 'subjects': {'dsa': 80, 'english': 34, 'ds': 75}}
+True
+
+[ ]
+d = {'name':'nitish','gender':'male','age':33}
+
+for i in d:
+  print(i,d[i])
+name nitish
+gender male
+age 33
+Dictionary Functions
+
+[ ]
+# len/sorted
+len(d)
+print(d)
+sorted(d,reverse=True)
+max(d)
+
+
+[ ]
+# items/keys/values
+print(d)
+
+print(d.items())
+print(d.keys())
+print(d.values())
+{'name': 'nitish', 'gender': 'male', 'age': 33}
+dict_items([('name', 'nitish'), ('gender', 'male'), ('age', 33)])
+dict_keys(['name', 'gender', 'age'])
+dict_values(['nitish', 'male', 33])
+
+[ ]
+# update
+d1 = {1:2,3:4,4:5}
+d2 = {4:7,6:8}
+
+d1.update(d2)
+print(d1)
+{1: 2, 3: 4, 4: 7, 6: 8}
+Dictionary Comprehension
+image.png
+
+
+[ ]
+# print 1st 10 numbers and their squares
+{i:i**2 for i in range(1,11)}
+{1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49, 8: 64, 9: 81, 10: 100}
+
+[ ]
+distances = {'delhi':1000,'mumbai':2000,'bangalore':3000}
+print(distances.items())
+dict_items([('delhi', 1000), ('mumbai', 2000), ('bangalore', 3000)])
+
+[ ]
+# using existing dict
+distances = {'delhi':1000,'mumbai':2000,'bangalore':3000}
+{key:value*0.62 for (key,value) in distances.items()}
+{'delhi': 620.0, 'mumbai': 1240.0, 'bangalore': 1860.0}
+
+[ ]
+# using zip
+days = ["Sunday", "Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
+temp_C = [30.5,32.6,31.8,33.4,29.8,30.2,29.9]
+
+{i:j for (i,j) in zip(days,temp_C)}
+{'Sunday': 30.5,
+ 'Monday': 32.6,
+ 'Tuesday': 31.8,
+ 'Wednesday': 33.4,
+ 'Thursday': 29.8,
+ 'Friday': 30.2,
+ 'Saturday': 29.9}
+
+[ ]
+# using if condition
+products = {'phone':10,'laptop':0,'charger':32,'tablet':0}
+
+{key:value for (key,value) in products.items() if value>0}
+{'phone': 10, 'charger': 32}
+
+[ ]
+# Nested Comprehension
+# print tables of number from 2 to 4
+{i:{j:i*j for j in range(1,11)} for i in range(2,5)}
+{2: {1: 2, 2: 4, 3: 6, 4: 8, 5: 10, 6: 12, 7: 14, 8: 16, 9: 18, 10: 20},
+ 3: {1: 3, 2: 6, 3: 9, 4: 12, 5: 15, 6: 18, 7: 21, 8: 24, 9: 27, 10: 30},
+ 4: {1: 4, 2: 8, 3: 12, 4: 16, 5: 20, 6: 24, 7: 28, 8: 32, 9: 36, 10: 40}}
+
+[ ]
+{
+    2:{1:2,2:4,3:6,4:8},
+    3:{1:3,2:6,3:9,4:12},
+    4:{1:4,2:8,3:12,4:16}
+}
+Colab paid products - Cancel contracts here.............
+
+I’ll explain your notebook like a beginner lesson so it’s easy to understand. Think of Python data structures like different types of containers for storing data.
+
+Your notebook has 4 main parts:
+
+1️⃣ Lists
+2️⃣ Tuples
+3️⃣ Sets
+4️⃣ Dictionaries
+
+1️⃣ Python Lists (Most commonly used)
+What is a List?
+
+A list is a container that can store many items in one variable.
+
+Example:
+
+L = [1,2,3]
+
+Think of it like a shopping bag 🛍️ that can hold many items.
+
+Example:
+
+fruits = ["apple","banana","mango"]
+Characteristics of Lists
+
+Lists are:
+
+✔ Ordered → items keep their position
+✔ Mutable → you can change them
+✔ Allow duplicates
+✔ Can store different types
+
+Example:
+
+L = [1, True, 5.6, "Hello"]
+Accessing List Items
+
+Each item has a position called index.
+
+Example:
+
+L = [10,20,30]
+
+Indexes:
+
+0 -> 10
+1 -> 20
+2 -> 30
+
+Access:
+
+L[0]   # 10
+L[2]   # 30
+Slicing Lists
+
+Slicing means getting multiple items.
+
+Example:
+
+L = [1,2,3,4,5,6]
+
+L[1:4]
+
+Output:
+
+[2,3,4]
+
+Reverse list:
+
+L[::-1]
+
+Output
+
+[6,5,4,3,2,1]
+Adding Items to a List
+append()
+
+Adds one item at the end
+
+L = [1,2,3]
+L.append(4)
+
+Result
+
+[1,2,3,4]
+extend()
+
+Adds multiple items
+
+L.extend([5,6])
+
+Result
+
+[1,2,3,4,5,6]
+insert()
+
+Add item at specific position
+
+L.insert(1,100)
+
+Result
+
+[1,100,2,3]
+Editing List
+
+Change value using index
+
+L = [1,2,3]
+
+L[1] = 200
+
+Result
+
+[1,200,3]
+Deleting Items
+del
+del L[2]
+remove()
+
+Removes specific value
+
+L.remove(5)
+pop()
+
+Removes last item
+
+L.pop()
+clear()
+
+Deletes everything
+
+L.clear()
+List Operations
+Merge lists
+L1 + L2
+Repeat list
+L1 * 3
+
+Example:
+
+[1,2] * 3
+
+Output
+
+[1,2,1,2,1,2]
+List Functions
+
+Common functions:
+
+len(L)      # length
+min(L)      # smallest value
+max(L)      # biggest value
+sorted(L)   # sort list
+
+Example
+
+L = [2,1,5]
+
+sorted(L)
+
+Output
+
+[1,2,5]
+List Comprehension (Important)
+
+This is short way to create lists.
+
+Normal way:
+
+L = []
+
+for i in range(1,11):
+    L.append(i)
+
+Short way:
+
+L = [i for i in range(1,11)]
+
+Output
+
+[1,2,3,4,5,6,7,8,9,10]
+
+Example: squares
+
+[i**2 for i in range(1,6)]
+
+Output
+
+[1,4,9,16,25]
+2️⃣ Tuples
+What is a Tuple?
+
+A tuple is like a list but cannot be changed.
+
+Example
+
+t = (1,2,3)
+
+Key rule:
+
+❌ Cannot modify
+
+t[0] = 10
+
+Error ❗
+
+Tuple Characteristics
+
+✔ Ordered
+✔ Immutable (cannot change)
+✔ Allows duplicates
+
+Tuple Example
+t = (1,2,3,4)
+
+t[0]
+
+Output
+
+1
+Tuple Unpacking
+a,b,c = (1,2,3)
+
+Result
+
+a = 1
+b = 2
+c = 3
+3️⃣ Sets
+What is a Set?
+
+A set is a collection of unique values.
+
+Example:
+
+s = {1,2,3}
+
+Key properties:
+
+✔ No duplicates
+✔ Unordered
+✔ Mutable
+
+Example:
+
+{1,1,2,2,3}
+
+Output
+
+{1,2,3}
+
+Duplicates removed automatically.
+
+Set Operations
+
+Sets are used for mathematical operations.
+
+Union
+s1 | s2
+
+All elements.
+
+Intersection
+
+Common elements.
+
+s1 & s2
+Difference
+s1 - s2
+
+Elements only in s1.
+
+Example:
+
+s1 = {1,2,3}
+s2 = {3,4,5}
+
+Results:
+
+Union -> {1,2,3,4,5}
+Intersection -> {3}
+4️⃣ Dictionaries
+What is a Dictionary?
+
+Dictionary stores data in key-value pairs.
+
+Example:
+
+student = {
+"name":"Rahul",
+"age":20,
+"course":"CSE"
+}
+
+Think of it like:
+
+name  -> Rahul
+age   -> 20
+course -> CSE
+Accessing Dictionary
+student["age"]
+
+Output
+
+20
+Adding Data
+student["city"] = "Dhaka"
+Deleting Data
+del student["age"]
+Looping Through Dictionary
+for key in student:
+    print(key, student[key])
+Dictionary Functions
+d.keys()    # all keys
+d.values()  # all values
+d.items()   # key-value pairs
+Dictionary Comprehension
+
+Short way to create dictionary.
+
+Example:
+
+{i:i**2 for i in range(1,6)}
+
+Output
+
+{1:1, 2:4, 3:9, 4:16, 5:25}
+Simple Summary
+Type	Symbol	Can change?	Duplicate allowed?
+List	[]	Yes	Yes
+Tuple	()	No	Yes
+Set	{}	Yes	No
+Dictionary	{key:value}	Yes	Keys No
+
+✅ Easy way to remember
+
+Data Structure	Think of it as
+List	Shopping bag
+Tuple	Locked list
+Set	Unique collection
+Dictionary	Phonebook
+
+If you want, I can also explain:
+
+✔ The 10 most important Python list interview questions
+✔ How these appear in exams
+✔ 5 tricky Python questions teachers usually ask
+✔ A visual cheat sheet for Lists / Tuples / Sets / Dict
+
+Just tell me 👍
+
+✔ A visual cheat sheet for Lists / Tuples / Sets / Dict
+
+Here is a simple visual cheat sheet for the four most important Python data structures: List, Tuple, Set, and Dictionary. Think of them as different types of containers for storing data 📦.
+
+🧠 Python Data Structures Cheat Sheet
+Feature	List	Tuple	Set	Dictionary
+Syntax	[ ]	( )	{ }	{key:value}
+Ordered	✅ Yes	✅ Yes	❌ No	✅ Yes (Python 3.7+)
+Mutable (changeable)	✅ Yes	❌ No	✅ Yes	✅ Yes
+Allows duplicates	✅ Yes	✅ Yes	❌ No	❌ Keys cannot repeat
+Indexing	✅ Yes	✅ Yes	❌ No	❌ Uses keys
+Example	[1,2,3]	(1,2,3)	{1,2,3}	{'name':'Rahul'}
+📋 1. List
+Think of it like:
+
+🧺 A shopping basket where you can add, remove, or change items.
+
+Example
+L = [10, 20, 30, 40]
+Access items
+L[0]   # 10
+L[2]   # 30
+Change items
+L[1] = 50
+Add items
+L.append(60)
+
+✔ Lists are the most commonly used structure.
+
+🔒 2. Tuple
+Think of it like:
+
+📦 A sealed box — once created, you cannot change it.
+
+Example
+T = (10, 20, 30)
+Access items
+T[0]   # 10
+❌ Not allowed
+T[1] = 50
+Why use tuples?
+
+✔ Faster
+✔ Uses less memory
+✔ Safe (data cannot change)
+
+🔗 3. Set
+Think of it like:
+
+🎟 A collection of unique tickets — duplicates are removed automatically.
+
+Example
+S = {1,2,3,3,4}
+
+Result
+
+{1,2,3,4}
+Add items
+S.add(5)
+Set operations
+A = {1,2,3}
+B = {3,4,5}
+
+A | B   # Union
+A & B   # Intersection
+A - B   # Difference
+
+✔ Best for removing duplicates and math operations
+
+🗂 4. Dictionary
+Think of it like:
+
+📒 A phone book — each name has a phone number.
+
+Example
+student = {
+    "name": "Rahul",
+    "age": 20,
+    "grade": "A"
+}
+Access values
+student["name"]
+
+Output
+
+Rahul
+Add new data
+student["city"] = "Chattogram"
+
+✔ Best when you want key → value mapping
+
+⚡ Super Easy Way to Remember
+Structure	Memory Trick
+List	Editable list of items
+Tuple	Locked list
+Set	Unique items only
+Dictionary	Key → Value pair
+
+✅ Example combining all four
+
+student = {
+    "name": "Rahul",
+    "marks": [80,90,85],   # list
+    "subjects": ("math","english"),  # tuple
+    "skills": {"python","java"}  # set
+}
+
+💡 Since you are learning Python basics (like in the notebook you shared), the 3 most important interview questions are usually:
+
+1️⃣ Difference between List and Tuple
+2️⃣ Why Sets remove duplicates
+3️⃣ How Dictionary stores key-value pairs
+
+If you want, I can also show you a super simple 1-page Python cheat sheet (used by programmers) that makes these 4 structures impossible to forget.
 
 
 

@@ -1,3 +1,96 @@
 https://www.coursera.org/learn/bits-data-structures-and-algorithms
 https://www.youtube.com/watch?v=UtI5SDOFymw&list=PL3eEXnCBViH8qQtEEoN7iy8ldG9uaYknF
 https://www.youtube.com/watch?v=zewIhSiv7dE&list=PL3eEXnCBViH-D-X8940NKo0ouhK0Mg-hf
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+// Node structure
+struct Node {
+    int data;
+    struct Node* next;
+};
+
+// Function to create a new node
+struct Node* createNode(int data) {
+    struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
+    newNode->data = data;
+    newNode->next = NULL;
+    return newNode;
+}
+
+// Insert node at the end
+void append(struct Node** head_ref, int data) {
+    struct Node* newNode = createNode(data);
+    if (*head_ref == NULL) {
+        *head_ref = newNode;
+        return;
+    }
+    struct Node* temp = *head_ref;
+    while (temp->next != NULL)
+        temp = temp->next;
+    temp->next = newNode;
+}
+
+// Insert node at the beginning
+void prepend(struct Node** head_ref, int data) {
+    struct Node* newNode = createNode(data);
+    newNode->next = *head_ref;
+    *head_ref = newNode;
+}
+
+// Delete node by value
+void deleteNode(struct Node** head_ref, int key) {
+    struct Node* temp = *head_ref;
+    struct Node* prev = NULL;
+
+    // If head node holds the key
+    if (temp != NULL && temp->data == key) {
+        *head_ref = temp->next;
+        free(temp);
+        return;
+    }
+
+    // Search for the key
+    while (temp != NULL && temp->data != key) {
+        prev = temp;
+        temp = temp->next;
+    }
+
+    if (temp == NULL) {
+        printf("%d not found in the list.\n", key);
+        return;
+    }
+
+    prev->next = temp->next;
+    free(temp);
+}
+
+// Print the linked list
+void printList(struct Node* head) {
+    while (head != NULL) {
+        printf("%d -> ", head->data);
+        head = head->next;
+    }
+    printf("NULL\n");
+}
+
+// Main function to test the linked list
+int main() {
+    struct Node* head = NULL;
+
+    append(&head, 10);
+    append(&head, 20);
+    append(&head, 30);
+    prepend(&head, 5);
+
+    printf("Initial linked list:\n");
+    printList(head);
+
+    deleteNode(&head, 20);
+    printf("After deleting 20:\n");
+    printList(head);
+
+    return 0;
+}
