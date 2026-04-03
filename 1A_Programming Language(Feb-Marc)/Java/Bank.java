@@ -10,6 +10,10 @@ public class Bank {
         balance += depositAmount;
     }
 
+    public void Account() {
+        System.err.println("Called");
+    }
+
     public void withdrawFunds(double withdrawAmount) {
         if (withdrawAmount <= balance) {
             balance -= withdrawAmount;

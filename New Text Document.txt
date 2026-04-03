@@ -1,7 +1,6 @@
-COMPUTER ARCHITECTURE:CA
-COMPUTER ORGANIZATION:CO
-COMPILER DESIGN:CD
-BASIC MATHS
-ALGORITHMS
-DATA STRUCTURES
-C,C++,JAVA,PYTHON
+Compiler Design
+Computter Arcitecture
+Computer Networkings
+Coputer Organization
+Python+Java
+------------------------>Till May
